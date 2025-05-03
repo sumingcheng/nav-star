@@ -1,0 +1,41 @@
+/* Tailwind CSS 基础导入 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 基础字体设置 */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* 基础元素设置 */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 自定义滚动条 */
+@layer utilities {
+  .scrollbar-custom {
+    @apply scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-600 scrollbar-track-transparent;
+  }
+}
+
+@layer base {
+  html {
+    @apply scrollbar-custom;
+  }
+}

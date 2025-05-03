@@ -1,0 +1,17 @@
+{
+  "plugins": [
+    "import"
+  ],
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "react-hooks/exhaustive-deps": "off", // 关闭规则
+    "import/no-cycle": [
+      "error",
+      {
+        "maxDepth": 10
+      }
+    ],
+    "react/no-unescaped-entities": "off",
+    "react-hooks/rules-of-hooks": "error"
+  }
+}
